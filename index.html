@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="toastr/toastr.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>E-Commerce Web Site</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img src="images/logo2.png" alt="">
+        <ul class="menu d-xl-flex d-none">
+            <li class="active">Home</li>
+            <li>Partners</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+        <ul class="menu_icons">
+            <li><i class="bi bi-person"></i></li>
+            <li><i class="bi bi-search"></i></li>
+            <li class="basket_icon" onclick="toggleModal()">
+                <i class="bi bi-bag"></i>
+                <span class="basket_count"></span>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="slider">
+        <div id="carouselSellSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/women.jpg" class="d-block w-100" alt="" />
+                    <h2 class="img-title">women's clothing</h2>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/men.jpg" class="d-block w-100" alt="" />
+                    <h2 class="img-title">men's clothing</h2>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/tecnology.jpg" class="d-block w-100" alt="" />
+                    <h2 class="img-title">electronics</h2>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/jewellery.jpeg" class="d-block w-100" alt="" />
+                    <h2 class="img-title">jewelery</h2>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSellSlider"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSellSlider"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <section class="find">
+        <div class="filter_background"></div>
+            <ul class="filter">
+                <!-- <li class="active">ALL</li>
+                <li>MEN</li>
+                <li>WOMEN</li>
+                <li>TEKNOLOGY</li> -->
+            </ul>
+        <div>
+    </section>
+    <!-- store -->
+    <section class="store my-2">
+
+    </section>
+    <!-- card -->
+    <section class="sell_list">
+        <!-- <div class="col-3 sell_card">
+            <div class="sell_card-img ">
+                <img class="img-fluid shadow" src="./images/books/alayci-kus.jpg" width="258" height="400" />
+            </div>
+            <div class="sell_detail">
+                    <span class="fos gray">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</span><br />
+                    <span class="fw-light gray-info">men's clothing</span><br />
+                    <div class="sell_star-rate">
+                        <span><i class="bi bi-star-fill"></i>4,25</span>
+                        <span><i class="bi bi-bag-fill"></i> 55 </span>
+                    </div>
+            </div>
+            <p class="sell_description fos gray">
+                Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday
+            </p>
+            <div class="price">
+                <span class="black fw-bold fs-4">25,50 $</span>
+                <span class="fs-5 fw-bold old_price">55,42 $</span>
+            </div>
+            <button class="btn btn-purple" >Buy Now</button>
+        </div> -->
+    </section>
+
+    <div class="basket_modal">
+        <div class="basket_items">
+          <i class="bi bi-x" onclick="toggleModal()"></i>
+          <h2 class="basket_title">Your Items</h2>
+          <ul class="basket_list">
+            <!-- <li class="basket_item">No items to Buy again.</li> -->
+          </ul>
+          <div class="basket_total">
+            <span class="fw-bold mb-3 fs-4 total_price"></span>
+            <button class="btn_purple" onclick="myFunction()">CHECOKUT</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer mt-4">
+        <div class="footer-main">
+          <div class="footer-logo">
+            <img src="images/logo2.png" alt="">
+            <p> 
+            Copyright &copy; 2023 | Udemig eğitim çalışmasıdır  by <a href="www.linkedin.com/in/hasan-ulusoy-react">Hasan ULUSOY</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- boostrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <!-- boostrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous">
+    </script>
+      <script src="jquery/jquery.min.js"></script>
+    <script src="toastr/toastr.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
